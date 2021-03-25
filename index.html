@@ -46,6 +46,26 @@
         .slide-controller:nth-child(12):checked~.slide-show .slides-list {
             --selected-item: 2;
         }
+        
+        .icones {
+            /* Aqui é iniciado a configuração geral dos botões ou icones. */
+            position: fixed;
+            /* Aqui é definido o position como fixed que torna o bloco inserido flutuante com orientação na página geral. */
+            bottom: 2%;
+            /* Para deixar os botões na parte inferior da página é usado o bottom com um valor pequeno, no caso 2%. */
+            left: 90%;
+            /* Para centralizar os botões no meio da página é usado o left com 50%. */
+            padding: 1%;
+            /* Aqui é inserido um pequeno espaço dentro do bloco.  */
+            z-index: 10000000;
+            /* O z-index é usado para uma ordenação do estilo, por isso aqui é usado um valor alto, para ficar por cima dos outros. */
+        }
+        
+        .icones img:hover {
+            /* Aqui é definido o efeito quando o mouse passa por cima da imagem */
+            filter: invert(30%);
+            /* Foi usado o filter: invert para colocar as cores opostas das imagens.  */
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -55,12 +75,12 @@
         <center><img src="img/logo-logo.png" width="205" height="61" /></center>
         <center>
             <img src="img/line01.png" width="826" height="68" /><br />
-            <a href="https://api.whatsapp.com/send?phone=5537999172462&amp;text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento"><img src="img/bt0.png" width="300" height="50" /></a>
+            <a href="https://api.whatsapp.com/send?phone=5537999172462&amp;text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento"><img src="img/bt1.png" width="300" height="50" /></a>
             <a href="https://api.whatsapp.com/send?phone=5537999172462&amp;text=Ol%C3%A1%2C%20Tenho%20uma%20d%C3%BAvida"><img src="img/bt2.png" width="300" height="50" /></a>
             <p><img src="img/our_service.png" /></p>
             <p><img src="img/services_type.png" /></p>
             <p><br />
-                <a href="https://api.whatsapp.com/send?phone=5537999172462&amp;text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento"><img src="img/bt0.png" width="300" height="50" /></a>
+                <a href="https://api.whatsapp.com/send?phone=5537999172462&amp;text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento"><img src="img/bt1.png" width="300" height="50" /></a>
                 <a href="https://api.whatsapp.com/send?phone=5537999172462&amp;text=Ol%C3%A1%2C%20Tenho%20uma%20d%C3%BAvida"><img src="img/bt2.png" width="300" /></a>
             </p>
             <p><img src="img/before_after.png" /></p>
@@ -88,10 +108,20 @@
                 <a href="https://www.google.com/search?q=zetroc+home+clean&amp;oq=zetroc+home&amp;aqs=chrome.0.69i59j69i57j69i60l3.4866j0j4&amp;sourceid=chrome&amp;ie=UTF-8#lrd=0xa697c6dcf79127:0xaac69d326b768ad0,1,,,"><img src="img/google_icon.png" width="74" /></a>
             </p>
             <p>
-                <a href="https://api.whatsapp.com/send?phone=5537999172462&amp;text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento"><img src="img/bt0.png" width="300" height="50" /></a>
+                <a href="https://api.whatsapp.com/send?phone=5537999172462&amp;text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento"><img src="img/bt1.png" width="300" height="50" /></a>
                 <a href="https://api.whatsapp.com/send?phone=5537999172462&amp;text=Ol%C3%A1%2C%20Tenho%20uma%20d%C3%BAvida"><img src="img/bt2.png" width="300" height="50" /></a>
             </p>
         </center>
+        <div class="icones col-sm-12">
+            <!-- Aqui inicia a div com a class icones que será o bloco que irá conter os icones ou botões. -->
+            <a href="https://api.whatsapp.com/send?phone=5537999172462&amp;text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento">
+                <!-- Aqui é inserido o link com a url da api do whatsapp com o caminhi da página. Junto no caminho da página é utilizado o PHP para pegar dinamicamente a página atual para isso é usado o domínio seguido de $_SERVER["REQUEST_URI"]; ?>. -->
+                <img class="img-responsive" src="img/wpp_icon.png" alt="botão de compartilhamento whatsapp" title="Compartilhe o link da página no whatsapp">
+                <!-- Aqui é inserido a imagem. -->
+            </a>
+            <!-- Fecha o link. -->
+        </div>
+        <!-- Fecha a div icones -->
 </body>
 
 </html>
